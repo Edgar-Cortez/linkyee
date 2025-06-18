@@ -46,20 +46,20 @@ tagline: >-
 # target: `_blank` opens in a new tab, `_self` opens in the same frame
 links:
   links:
-    - link:
-        icon: "fa-solid fa-rss"
-        text: "Website"
-        url: "https://www.thesolsalt.com/discount/welcome10"
-        alt: "Sol Salt's Website"
-        title: "SolSalt's Website"
-        target: "_blank"
-    - link:
-        icon: "fa-solid fa-user-plus"
-        text: "Email List"
-        url: "https://www.sendfox.com/thesolsalt/"
-        alt: "Sol Salt's Email List"
-        title: "SolSalt's Email List"
-        target: "_blank"
+  - link:
+      icon: "fa-solid fa-rss"
+      text: "Website"
+      url: "https://www.thesolsalt.com/discount/welcome10"
+      alt: "Sol Salt's Website"
+      title: "SolSalt's Website"
+      target: "_blank"
+  - link:
+      icon: "fa-solid fa-user-plus"
+      text: "Email List"
+      url: "https://www.sendfox.com/thesolsalt/"
+      alt: "Sol Salt's Email List"
+      title: "SolSalt's Email List"
+      target: "_blank"
 
 # List of social media links
 # icon: Use Font Awesome icons (https://fontawesome.com/search?o=r&m=free)
