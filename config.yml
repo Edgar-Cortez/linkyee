@@ -45,7 +45,6 @@ tagline: >-
 # alt: Alternative text for accessibility
 # target: `_blank` opens in a new tab, `_self` opens in the same frame
 links:
-  links:
   - link:
       icon: "fa-solid fa-rss"
       text: "Website"
