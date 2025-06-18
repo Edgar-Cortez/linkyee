@@ -22,7 +22,7 @@ plugins:
 #       - ZhgChgLi/linkyee
 
 # Google Analytics tracking id
-google_analytics_id:
+google_analytics_id: "G-M6J9SBDC1F"
 
 # HTML Title
 title: "SolSalt's Links"
