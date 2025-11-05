@@ -1,23 +1,22 @@
-
-
 {
-  "name": "ZhgChgLi",
-  "short_name": "ZhgChgLi",
-  "description": "ZhgChgLi iOS Developer 求知若渴 教學相長 更愛電影/美劇/西音/運動/生活",
+  "name": "SOL SALT MAGNESIUM",
+  "short_name": "SOL SALT",
   "icons": [
     {
-      "src": "/assets/img/favicons/android-chrome-192x192.png",
+      "src": "/./images/favicons/favicon.ico/web-app-manifest-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
-      "src": "/assets/img/favicons/android-chrome-512x512.png",
+      "src": "/./images/favicons/favicon.ico/web-app-manifest-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
-    }],
-  "start_url": "/index.html",
-  "theme_color": "#2a1e6b",
-  "background_color": "#ffffff",
-  "display": "fullscreen"
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+ "start_url": "/index.html",
+ "theme_color": "#2a1e6b",
+ "background_color": "#ffffff",
+ "display": "fullscreen"
 }
-
