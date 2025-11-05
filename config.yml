@@ -34,7 +34,7 @@ avatar: "./images/SOL SALT - icon.png"
 name: "SOLSALT"
 
 # Tagline section text
-tagline: >-
+tagline:
   Topical magnesium for sleep, recovery, and calm.\nMade in Texas, small batch, all natural.\nReset your body. Fuel your Sol.
 
 # List of links
@@ -47,17 +47,17 @@ tagline: >-
 links:
   - link:
       icon: "fa-solid fa-rss"
-      text: "Website"
+      text: "Sol Salt Website"
       url: "https://www.thesolsalt.com/discount/welcome10"
-      alt: "Sol Salt's Website"
-      title: "SolSalt's Website"
+      alt: "Sol Salt Website"
+      title: "SolSalt Website"
       target: "_blank"
   - link:
       icon: "fa-solid fa-user-plus"
-      text: "Email List"
+      text: "Join Our Email List"
       url: "https://www.sendfox.com/lp/1v5w0d"
       alt: "Sol Salt's Email List"
-      title: "SolSalt's Email List"
+      title: "Sol Salt's Email List"
       target: "_blank"
 
 # List of social media links
@@ -75,9 +75,15 @@ socials:
       target: "_blank"
   - social:
       icon: "fa-brands fa-instagram"
-      url: "https://www.instagram.com/thesolsalt/"
+      url: "https://www.instagram.com/solsalt_mag/"
       title: "Instagram"
       alt: "Sol Salt's Instagram"
+      target: "_blank"
+  - social:
+      icon: "fa-brands fa-tiktok"
+      url: "https://www.tiktok.com/@solsalt_mag/"
+      title: "TikTok"
+      alt: "Sol Salt's TikTok"
       target: "_blank"
   - social:
       icon: "fa-solid fa-envelope"
@@ -88,7 +94,7 @@ socials:
 
 # Footer text
 footer: >
-  Hi there! Follow us on Facebook or Instagram.
+  Hi there! Follow us on our socials!
 
 # Footer copyright message
 # Linkyee is a 100% free, open-source project—feel free to modify the copyright message as you like. :)
