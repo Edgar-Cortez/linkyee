@@ -77,10 +77,17 @@ links:
       target: "_blank"
   - link:
       icon: "fa-brands fa-tiktok"
-      text: "Join Our Email List"
+      text: "TikTok"
       url: "https://www.tiktok.com/@solsalt_mag/"
       alt: "Sol Salt's TikTok"
       title: "Sol Salt's TikTok"
+      target: "_blank"
+  - link:
+      icon: "fa-solid fa-envelope"
+      text: "Email"
+      url: "mailto:thesolsalt@gmail.com"
+      alt: "Sol Salt's Email"
+      title: "Sol Salt's Email"
       target: "_blank"
 
 # List of social media links
@@ -89,31 +96,31 @@ links:
 # url: The URL of the social media link
 # alt: Alternative text for accessibility
 # target: _blank opens in a new tab, _self opens in the same frame
-socials:
-  - social:
-      icon: "fa-brands fa-facebook"
-      url: "https://www.facebook.com/profile.php?id=61566759776296&mibextid=ZbWKwL"
-      title: "Facebook"
-      alt: "Sol Salt's Facebook"
-      target: "_blank"
-  - social:
-      icon: "fa-brands fa-instagram"
-      url: "https://www.instagram.com/solsalt_mag/"
-      title: "Instagram"
-      alt: "Sol Salt's Instagram"
-      target: "_blank"
-  - social:
-      icon: "fa-brands fa-tiktok"
-      url: "https://www.tiktok.com/@solsalt_mag/"
-      title: "TikTok"
-      alt: "Sol Salt's TikTok"
-      target: "_blank"
-  - social:
-      icon: "fa-solid fa-envelope"
-      url: "mailto:thesolsalt@gmail.com"
-      title: "Email: thesolsalt@gmail.com"
-      alt: "thesolsalt@gmail.com"
-      target: "_blank"
+#socials:
+ # - social:
+      #icon: "fa-brands fa-facebook"
+      #url: "https://www.facebook.com/profile.php?id=61566759776296&mibextid=ZbWKwL"
+      #title: "Facebook"
+      #alt: "Sol Salt's Facebook"
+      #target: "_blank"
+  #- social:
+      #icon: "fa-brands fa-instagram"
+      #url: "https://www.instagram.com/solsalt_mag/"
+      #title: "Instagram"
+      #alt: "Sol Salt's Instagram"
+      #target: "_blank"
+  #- social:
+      #icon: "fa-brands fa-tiktok"
+      #url: "https://www.tiktok.com/@solsalt_mag/"
+      #title: "TikTok"
+      #alt: "Sol Salt's TikTok"
+      #target: "_blank"
+  #- social:
+      #icon: "fa-solid fa-envelope"
+      #url: "mailto:thesolsalt@gmail.com"
+      #title: "Email: thesolsalt@gmail.com"
+      #alt: "thesolsalt@gmail.com"
+      #target: "_blank"
 
 # Footer text
 footer: >
