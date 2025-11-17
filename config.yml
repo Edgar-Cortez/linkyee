@@ -48,10 +48,10 @@ tagline: >
 # target: `_blank` opens in a new tab, `_self` opens in the same frame
 links:
   - link:
-      icon: "fa-solid fa-rss"
-      text: "SOLSALT Website"
+      icon: "fa-solid fa-shop"
+      text: "Shop Our Products"
       url: "https://www.thesolsalt.com/discount/welcome10"
-      alt: "Sol Salt Website"
+      alt: "Sol Salt's Website"
       title: "SolSalt Website"
       target: "_blank"
   - link:
@@ -60,6 +60,27 @@ links:
       url: "https://www.sendfox.com/lp/1v5w0d"
       alt: "Sol Salt's Email List"
       title: "Sol Salt's Email List"
+      target: "_blank"
+  - link:
+      icon: "fa-solid fa-facebook"
+      text: "Facebook"
+      url: "https://www.facebook.com/profile.php?id=61566759776296&mibextid=ZbWKwL"
+      alt: "Sol Salt's Instagram"
+      title: "Sol Salt's Instagram"
+      target: "_blank"      
+  - link:
+      icon: "fa-solid fa-instagram"
+      text: "Instagram"
+      url: "https://www.instagram.com/solsalt_mag/"
+      alt: "Sol Salt's Instagram"
+      title: "Sol Salt's Instagram"
+      target: "_blank"
+  - link:
+      icon: "fa-solid fa-tiktok"
+      text: "Join Our Email List"
+      url: "https://www.tiktok.com/@solsalt_mag/"
+      alt: "Sol Salt's TikTok"
+      title: "Sol Salt's TikTok"
       target: "_blank"
 
 # List of social media links
