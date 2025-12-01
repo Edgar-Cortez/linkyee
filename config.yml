@@ -50,7 +50,7 @@ links:
   - link:
       icon: "fa-solid fa-shop"
       text: "Shop Our Products"
-      url: "https://www.thesolsalt.com/discount/welcome10"
+      url: "https://www.thesolsalt.com/discount/welcome10/?utm_source=shop-link&utm_medium=linkyee&utm_campaign=vendor"
       alt: "Sol Salt's Website"
       title: "SolSalt Website"
       target: "_blank"
