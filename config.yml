@@ -48,7 +48,7 @@ tagline: >
 # target: `_blank` opens in a new tab, `_self` opens in the same frame
 links:
   - link:
-      icon: "fa-solid fa-user-plus"
+      icon: "fa-solid fa-file-medical"
       text: "Sample Application Instructions"
       url: "https://edgar-cortez.github.io/linkyee/images/solsalt-sample-instructions.pdf"
       alt: "Sol Salt's Sample Application Instructions"
