@@ -39,6 +39,12 @@ tagline: >
   Made in Texas, small batch, all natural.<br>
   Reset your body. Fuel your Sol.
 
+  Late in the third trimester, nothing was working. 
+  Leg cramps, poor sleep, general soreness that no one had 
+  a real answer for. We started researching topical magnesium 
+  and couldn't believe it wasn't already everywhere. We built Sol Salt
+  because we needed it — and because we figured we probably weren't alone.
+
 # List of links
 # icon: Use Font Awesome icons (https://fontawesome.com/search?o=r&m=free)
 # text: The displayed text for the link
@@ -64,17 +70,17 @@ links:
   - link:
       icon: "fa-solid fa-user-plus"
       text: "Join Our Email List"
-      url: "https://www.sendfox.com/lp/1v5w0d"
+      url: "https://sendfox.com/thesolsalt"
       alt: "Sol Salt Email List"
       title: "Sol Salt Magnesium - Email List"
       target: "_blank"
-  - link:
-      icon: "fa-brands fa-facebook"
-      text: "Facebook"
-      url: "https://www.facebook.com/profile.php?id=61566759776296&mibextid=ZbWKwL"
-      alt: "Sol Salt Facebook"
-      title: "Sol Salt Magnesium - Facebook"
-      target: "_blank"      
+  #- link:
+     # icon: "fa-brands fa-facebook"
+     # text: "Facebook"
+     # url: "https://www.facebook.com/profile.php?id=61566759776296&mibextid=ZbWKwL"
+     # alt: "Sol Salt Facebook"
+     # title: "Sol Salt Magnesium - Facebook"
+     # target: "_blank"      
   - link:
       icon: "fa-brands fa-instagram"
       text: "Instagram"
@@ -82,13 +88,13 @@ links:
       alt: "Sol Salt Instagram"
       title: "Sol Salt Magnesium - Instagram"
       target: "_blank"
-  - link:
-      icon: "fa-brands fa-tiktok"
-      text: "TikTok"
-      url: "https://www.tiktok.com/@solsalt_mag/"
-      alt: "Sol Salt TikTok"
-      title: "Sol Salt Magnesium - TikTok"
-      target: "_blank"
+  #- link:
+     # icon: "fa-brands fa-tiktok"
+     # text: "TikTok"
+     # url: "https://www.tiktok.com/@solsalt_mag/"
+     # alt: "Sol Salt TikTok"
+     # title: "Sol Salt Magnesium - TikTok"
+     # target: "_blank"
   - link:
       icon: "fa-solid fa-envelope"
       text: "Email"
@@ -131,7 +137,9 @@ links:
 
 # Footer text
 footer: >
-  👆Hi there! Follow us on the socials!👆
+  Edgar & Julie <br>
+  Made by a husband and wife in DFW. <br>
+  Built because we needed it and nothing else existed.
 
 # Footer copyright message
 # Linkyee is a 100% free, open-source project—feel free to modify the copyright message as you like. :)
