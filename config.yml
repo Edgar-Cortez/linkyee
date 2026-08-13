@@ -35,15 +35,9 @@ name: "SOLSALT Magnesium"
 
 # Tagline section text
 tagline: >
-  Topical magnesium for sleep, recovery, and calm.<br>
+  Topical magnesium for sleep, recovery, and calm.<br>  
+  Built because we needed it and nothing else existed.<br>
   Made in Texas, small batch, all natural.<br>
-  Reset your body. Fuel your Sol.
-
-  Late in the third trimester, nothing was working. 
-  Leg cramps, poor sleep, general soreness that no one had 
-  a real answer for. We started researching topical magnesium 
-  and couldn't believe it wasn't already everywhere. We built Sol Salt
-  because we needed it — and because we figured we probably weren't alone.
 
 # List of links
 # icon: Use Font Awesome icons (https://fontawesome.com/search?o=r&m=free)
@@ -62,7 +56,7 @@ links:
       target: "_blank"
   - link:
       icon: "fa-solid fa-shop"
-      text: "Shop Our Products"
+      text: "Shop Sol Salt"
       url: "https://www.thesolsalt.com/discount/welcome10/?utm_source=shop-link&utm_medium=linkyee&utm_campaign=vendor"
       alt: "Sol Salt Website"
       title: "Sol Salt Website"
@@ -139,7 +133,6 @@ links:
 footer: >
   Edgar & Julie <br>
   Made by a husband and wife in DFW. <br>
-  Built because we needed it and nothing else existed.
 
 # Footer copyright message
 # Linkyee is a 100% free, open-source project—feel free to modify the copyright message as you like. :)
