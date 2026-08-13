@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sol Salt Magnesium — You Just Tried It</title>
+  <meta name="description" content="Curious what just happened to your skin? Here's what's in your hand and what to do next." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── TOKENS ─── */
+    :root {
+      --sage:        #2D6A56;
+      --sage-light:  #EBF5F0;
+      --sage-mid:    #C2DDD4;
+      --salt:        #F9F6F0;
+      --salt-dark:   #EDE8DF;
+      --ink:         #1A1A18;
+      --ink-mid:     #4A4A46;
+      --ink-light:   #8A8A84;
+      --border:      #DDD8CE;
+      --white:       #FFFFFF;
+
+      --display:     'Cormorant Garamond', Georgia, serif;
+      --body:        'DM Sans', system-ui, sans-serif;
+
+      --radius-sm:   6px;
+      --radius-md:   12px;
+      --radius-lg:   18px;
+      --radius-pill: 100px;
+
+      --max-w:       480px;
+    }
+
+    /* ─── RESET ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    img, svg { display: block; max-width: 100%; }
+    button, input { font: inherit; }
+
+    /* ─── BASE ─── */
+    body {
+      font-family: var(--body);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.6;
+      background: var(--salt);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+
+    /* ─── LAYOUT ─── */
+    .page {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 2.5rem 1.375rem 4rem;
+    }
+
+    /* ─── WORDMARK ─── */
+    .wordmark {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 2.5rem;
+    }
+    .wordmark-glyph {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--sage);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wordmark-glyph svg { width: 14px; height: 14px; }
+    .wordmark-text {
+      font-family: var(--body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      color: var(--ink-mid);
+      text-transform: uppercase;
+    }
+
+    /* ─── BADGE ─── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--sage-light);
+      color: var(--sage);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 1.25rem;
+    }
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+
+    /* ─── HERO ─── */
+    .hero-headline {
+      font-family: var(--display);
+      font-size: clamp(34px, 8vw, 44px);
+      font-weight: 500;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+    .hero-headline em {
+      font-style: italic;
+      color: var(--sage);
+    }
+    .hero-sub {
+      font-size: 16px;
+      color: var(--ink-mid);
+      line-height: 1.7;
+      margin-bottom: 2.25rem;
+      font-weight: 300;
+    }
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    /* ─── SECTION LABEL ─── */
+    .section-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 1rem;
+    }
+
+    /* ─── EXPLAIN CARDS ─── */
+    .explain-stack { display: flex; flex-direction: column; gap: 10px; margin-bottom: 2rem; }
+    .explain-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.125rem 1.25rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .explain-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--sage);
+      border-radius: 0 2px 2px 0;
+    }
+    .explain-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .explain-body {
+      font-size: 14px;
+      color: var(--ink-mid);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    /* ─── PRODUCT ROW ─── */
+    .product-list { display: flex; flex-direction: column; gap: 0; margin-bottom: 2rem; }
+    .product-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .product-row:last-child { border-bottom: none; }
+    .product-swatch {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .product-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+    .product-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      background: var(--sage-light);
+      color: var(--sage);
+      padding: 2px 7px;
+      border-radius: var(--radius-pill);
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .product-desc {
+      font-size: 13px;
+      color: var(--ink-mid);
+      line-height: 1.55;
+      font-weight: 300;
+    }
+
+    /* ─── CTA BLOCK ─── */
+    .cta-block {
+      background: var(--ink);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .cta-headline {
+      font-family: var(--display);
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    .cta-sub {
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.65;
+      margin-bottom: 1.375rem;
+      font-weight: 300;
+    }
+    .input-row {
+      display: flex;
+      gap: 8px;
+    }
+    .email-input {
+      flex: 1;
+      height: 44px;
+      padding: 0 14px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--radius-sm);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 300;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .email-input::placeholder { color: rgba(255,255,255,0.38); }
+    .email-input:focus { border-color: var(--sage-mid); }
+    .submit-btn {
+      height: 44px;
+      padding: 0 18px;
+      background: var(--sage);
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.15s, transform 0.1s;
+      letter-spacing: 0.01em;
+    }
+    .submit-btn:hover { background: #256050; }
+    .submit-btn:active { transform: scale(0.98); }
+    .cta-privacy {
+      font-size: 11px;
+      color: rgba(255,255,255,0.38);
+      margin-top: 10px;
+      font-weight: 300;
+    }
+
+    /* ─── SHOP BUTTONS ─── */
+    .shop-stack { display: flex; flex-direction: column; gap: 10px; }
+    .shop-btn {
+      display: block;
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.1s, border-color 0.15s;
+      letter-spacing: 0.01em;
+    }
+    .shop-btn:active { transform: scale(0.98); }
+    .shop-btn.primary {
+      background: var(--sage);
+      color: var(--white);
+      border: none;
+    }
+    .shop-btn.primary:hover { background: #256050; }
+    .shop-btn.secondary {
+      background: transparent;
+      color: var(--ink-mid);
+      border: 1px solid var(--border);
+    }
+    .shop-btn.secondary:hover { border-color: var(--sage-mid); color: var(--sage); }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .footer-sig {
+      font-family: var(--display);
+      font-size: 18px;
+      font-style: italic;
+      color: var(--ink-mid);
+      margin-bottom: 6px;
+    }
+    .footer-sub {
+      font-size: 12px;
+      color: var(--ink-light);
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    /* ─── SUCCESS STATE ─── */
+    .success-msg {
+      display: none;
+      background: var(--sage-light);
+      border: 1px solid var(--sage-mid);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--sage);
+      font-weight: 400;
+    }
+
+    /* ─── MOTION ─── */
+    @media (prefers-reduced-motion: no-preference) {
+      .explain-card {
+        opacity: 0;
+        transform: translateY(12px);
+        animation: fadeUp 0.45s ease forwards;
+      }
+      .explain-card:nth-child(2) { animation-delay: 0.08s; }
+      .explain-card:nth-child(3) { animation-delay: 0.16s; }
+
+      @keyframes fadeUp {
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 400px) {
+      .input-row { flex-direction: column; }
+      .submit-btn { width: 100%; height: 42px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page" role="main">
+
+    <!-- Wordmark -->
+    <div class="wordmark" aria-label="SOL SALT">
+      <div class="wordmark-glyph" aria-hidden="true">
+        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="7" cy="7" r="5" stroke="white" stroke-width="1.5"/>
+          <path d="M7 4v3l2 1.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="wordmark-text">SOL SALT</span>
+    </div>
+
+    <!-- Badge -->
+    <div class="badge" aria-label="You just tried it">
+      <span class="badge-dot" aria-hidden="true"></span>
+      You just tried it
+    </div>
+
+    <!-- Hero -->
+    <h1 class="hero-headline">
+      Curious what just<br />
+      happened to your<br />
+      <em>skin?</em>
+    </h1>
+    <p class="hero-sub">
+      That sensation — the warmth, the tingling, the almost immediate release — is your body absorbing magnesium transdermally. Here's why it works the way it does.
+    </p>
+
+    <!-- Explain Cards -->
+    <p class="section-label">What you felt — explained</p>
+    <div class="explain-stack" role="list">
+
+      <div class="explain-card" role="listitem">
+        <p class="explain-title">The tingling</p>
+        <p class="explain-body">That's magnesium ions crossing the skin barrier and activating nerve receptors. It's more noticeable when your magnesium levels are low — which is extremely common, especially in pregnancy and postpartum.</p>
+      </div>
+
+      <div class="explain-card" role="listitem">
+        <p class="explain-title">Why it works faster than a supplement</p>
+        <p class="explain-body">Oral magnesium has to survive your digestive system first. Topical magnesium absorbs directly through the skin, bypassing that process entirely — which is also why it doesn't cause the stomach issues many supplements do.</p>
+      </div>
+
+      <div class="explain-card" role="listitem">
+        <p class="explain-title">Why it keeps working after you stop feeling it</p>
+        <p class="explain-body">The tingling fades as your levels stabilize. That's not the product wearing off — that's it doing its job. Most people notice the difference most clearly in sleep quality and muscle tension within the first week.</p>
+      </div>
+
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Product Lineup -->
+    <p class="section-label">You sampled the <strong>GEL</strong> — here's the full lineup</p>
+    <div class="product-list" role="list">
+
+      <div class="product-row" role="listitem">
+        <div class="product-swatch" style="background: linear-gradient(135deg, #7DC4A8 0%, #C2DDD4 100%);" aria-hidden="true"></div>
+        <div>
+          <p class="product-name">Spray</p>
+          <p class="product-desc">Fast absorption, ideal for legs, feet, and anywhere you need quick relief. Best for nighttime cramps and restless legs.</p>
+        </div>
+      </div>
+
+      <div class="product-row" role="listitem">
+        <div class="product-swatch" style="background: linear-gradient(135deg, #4A9B7F 0%, #7DC4A8 100%);" aria-hidden="true"></div>
+        <div>
+          <p class="product-name">Gel<span class="product-tag">What you tried</span></p>
+          <p class="product-desc">Thicker consistency for targeted muscle areas. Great for postpartum recovery, back tension, and sport soreness.</p>
+        </div>
+      </div>
+
+      <div class="product-row" role="listitem">
+        <div class="product-swatch" style="background: linear-gradient(135deg, #2D6A56 0%, #4A9B7F 100%);" aria-hidden="true"></div>
+        <div>
+          <p class="product-name">Cream</p>
+          <p class="product-desc">Daily maintenance with a skin-nourishing finish. Best for sensitive skin or anyone who wants a gentle, everyday option.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Email Capture -->
+    <!--
+    <div class="cta-block">
+      <h2 class="cta-headline">Get the most<br />out of it</h2>
+      <p class="cta-sub">We'll send a short usage guide plus a discount on your first full order — the one we wish we'd had when we started this.</p>
+      <form onsubmit="handleSubmit(event)" novalidate>
+        <div class="input-row">
+          <input
+            class="email-input"
+            type="email"
+            id="email"
+            placeholder="Your email address"
+            autocomplete="email"
+            required
+            aria-label="Email address"
+          />
+          <button class="submit-btn" type="submit">Send it</button>
+        </div>
+        <p class="cta-privacy">No spam. Unsubscribe anytime. We're a small brand — we actually read replies.</p>
+        <div class="success-msg" id="success-msg" role="alert" aria-live="polite">
+          You're in — check your inbox shortly.
+        </div>
+      </form>
+    </div>
+    -->
+
+    <!-- Shop Buttons -->
+    <p class="section-label">Ready to order?</p>
+    <div class="shop-stack">
+      <a href="https://www.thesolsalt.com/discount/SAMPLE35?utm_source=nfc_tag&utm_medium=offline&utm_campaign=sample_outreach&utm_content=sample_landing_page" class="shop-btn primary" role="button">Shop SOL SALT</a>
+        <!-- Create FAQ Playlist
+        <a href="#" class="shop-btn secondary" role="button">Watch the FAQ videos first →</a>
+        -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer-sig">Edgar &amp; Julie</p>
+      <p class="footer-sub">
+        Made by a husband and wife in DFW.<br />
+        Built because we needed it and nothing else existed.
+      </p>
+    </footer>
+
+  </main>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      var email = document.getElementById('email').value.trim();
+      var msg = document.getElementById('success-msg');
+
+      if (!email || !email.includes('@')) {
+        document.getElementById('email').focus();
+        return;
+      }
+
+      // Replace this block with your actual form submission logic
+      // e.g. Klaviyo, Mailchimp, or a custom endpoint
+      console.log('Email captured:', email);
+
+      document.getElementById('email').value = '';
+      msg.style.display = 'block';
+
+      setTimeout(function() {
+        msg.style.display = 'none';
+      }, 6000);
+    }
+  </script>
+
+</body>
+</html>
