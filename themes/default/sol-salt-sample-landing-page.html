@@ -360,6 +360,33 @@
 .sendfox-embed-card button[type="submit"]:active {
   transform: scale(0.98) !important;
 }
+
+/* ─── SENDFOX SUCCESS STATE ─── */
+
+/* Strip the card wrapper — same as the form state */
+.sendfox-embed-card > div[style*="flex-direction: column"] {
+  background: transparent !important;
+  padding: 8px 0 !important;
+  gap: 14px !important;
+}
+
+/* Checkmark circle — swap red for sage */
+.sendfox-embed-card > div[style*="flex-direction: column"] > div[style*="border-radius: 50%"] {
+  background: var(--sage) !important;
+  width: 48px !important;
+  height: 48px !important;
+  box-shadow: 0 0 0 8px rgba(45,106,86,0.15) !important;
+}
+
+/* Success message text */
+.sendfox-embed-card > div[style*="flex-direction: column"] > div[style*="font-size"] {
+  font-family: var(--body) !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  color: rgba(255,255,255,0.85) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01em !important;
+}    
     
     /* ─── SHOP BUTTONS ─── */
     .shop-stack { display: flex; flex-direction: column; gap: 10px; }
