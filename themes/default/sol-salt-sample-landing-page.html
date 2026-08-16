@@ -283,6 +283,60 @@
       font-weight: 300;
     }
 
+  /* ─── SENDFOX OVERRIDES ─── */
+  .sendfox-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sendfox-form input[type="email"],
+  .sendfox-form input[type="text"] {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: var(--radius-sm);
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 14px;
+    font-weight: 300;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .sendfox-form input[type="email"]::placeholder,
+  .sendfox-form input[type="text"]::placeholder {
+    color: rgba(255,255,255,0.38);
+  }
+  .sendfox-form input[type="email"]:focus,
+  .sendfox-form input[type="text"]:focus {
+    border-color: var(--sage-mid);
+  }
+  .sendfox-form button[type="submit"],
+  .sendfox-form input[type="submit"] {
+    width: 100%;
+    height: 44px;
+    padding: 0 18px;
+    background: var(--sage);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: var(--body);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    transition: background 0.15s, transform 0.1s;
+  }
+  .sendfox-form button[type="submit"]:hover,
+  .sendfox-form input[type="submit"]:hover {
+    background: #256050;
+  }
+  .sendfox-form button[type="submit"]:active,
+  .sendfox-form input[type="submit"]:active {
+    transform: scale(0.98);
+  }
+    
     /* ─── SHOP BUTTONS ─── */
     .shop-stack { display: flex; flex-direction: column; gap: 10px; }
     .shop-btn {
@@ -460,17 +514,13 @@
       <h2 class="cta-headline">Get the most<br />out of it</h2>
       <p class="cta-sub">We'll send a short usage guide plus a discount on your first full order — the one we wish we'd had when we started this.</p>
       <form onsubmit="handleSubmit(event)" novalidate>
-        <div class="cta-block">
-          <h2 class="cta-headline">Get the most<br />out of it</h2>
-          <p class="cta-sub">We'll send a short usage guide plus a discount on your first full order — the one we wish we'd had when we started this.</p>
-          <script
-            src="https://cdn.sendfox.com/js/embed.js"
-            data-form="1v867d"
-            data-api="https://sendfox.com"
-            async>
-          </script>
-          <p class="cta-privacy">No spam. Unsubscribe anytime. We're a small brand — we actually read replies.</p>
-        </div>
+        <script
+          src="https://cdn.sendfox.com/js/embed.js"
+          data-form="1v867d"
+          data-api="https://sendfox.com"
+          async>
+        </script>
+        <p class="cta-privacy">No spam. Unsubscribe anytime. We're a small brand — we actually read replies.</p>
       </form>
     </div>
 
