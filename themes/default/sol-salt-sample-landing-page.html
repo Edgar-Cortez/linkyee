@@ -284,58 +284,82 @@
     }
 
   /* ─── SENDFOX OVERRIDES ─── */
-  .sendfox-form {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .sendfox-form input[type="email"],
-  .sendfox-form input[type="text"] {
-    width: 100%;
-    height: 44px;
-    padding: 0 14px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.18);
-    border-radius: var(--radius-sm);
-    color: var(--white);
-    font-family: var(--body);
-    font-size: 14px;
-    font-weight: 300;
-    outline: none;
-    transition: border-color 0.15s;
-  }
-  .sendfox-form input[type="email"]::placeholder,
-  .sendfox-form input[type="text"]::placeholder {
-    color: rgba(255,255,255,0.38);
-  }
-  .sendfox-form input[type="email"]:focus,
-  .sendfox-form input[type="text"]:focus {
-    border-color: var(--sage-mid);
-  }
-  .sendfox-form button[type="submit"],
-  .sendfox-form input[type="submit"] {
-    width: 100%;
-    height: 44px;
-    padding: 0 18px;
-    background: var(--sage);
-    color: var(--white);
-    border: none;
-    border-radius: var(--radius-sm);
-    font-family: var(--body);
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    letter-spacing: 0.01em;
-    transition: background 0.15s, transform 0.1s;
-  }
-  .sendfox-form button[type="submit"]:hover,
-  .sendfox-form input[type="submit"]:hover {
-    background: #256050;
-  }
-  .sendfox-form button[type="submit"]:active,
-  .sendfox-form input[type="submit"]:active {
-    transform: scale(0.98);
-  }
+
+/* Wrapper card — strip SendFox's white card so it sits
+   inside the dark CTA block instead of floating over it */
+.sendfox-embed-card {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  font-family: var(--body) !important;
+  color: var(--white) !important;
+}
+
+/* Labels */
+.sendfox-embed-card label {
+  font-family: var(--body) !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: rgba(255,255,255,0.65) !important;
+  margin-bottom: 4px !important;
+}
+
+/* Text and email inputs */
+.sendfox-embed-card input[type="text"],
+.sendfox-embed-card input[type="email"] {
+  width: 100% !important;
+  height: 44px !important;
+  padding: 0 14px !important;
+  background: rgba(255,255,255,0.08) !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
+  border-radius: 6px !important;
+  color: var(--white) !important;
+  font-family: var(--body) !important;
+  font-size: 14px !important;
+  font-weight: 300 !important;
+  box-sizing: border-box !important;
+  transition: border-color 0.15s !important;
+}
+.sendfox-embed-card input[type="text"]::placeholder,
+.sendfox-embed-card input[type="email"]::placeholder {
+  color: rgba(255,255,255,0.38) !important;
+}
+.sendfox-embed-card input[type="text"]:focus,
+.sendfox-embed-card input[type="email"]:focus {
+  border-color: var(--sage-mid) !important;
+  outline: none !important;
+}
+
+/* GDPR checkbox row */
+.sendfox-embed-card input[type="checkbox"] {
+  accent-color: var(--sage) !important;
+}
+
+/* Submit button */
+.sendfox-embed-card button[type="submit"] {
+  width: 100% !important;
+  height: 46px !important;
+  padding: 0 18px !important;
+  background: var(--sage) !important;
+  color: var(--white) !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-family: var(--body) !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  letter-spacing: 0.01em !important;
+  transition: background 0.15s !important;
+  margin-top: 2px !important;
+}
+.sendfox-embed-card button[type="submit"]:hover {
+  background: #256050 !important;
+}
+.sendfox-embed-card button[type="submit"]:active {
+  transform: scale(0.98) !important;
+}
     
     /* ─── SHOP BUTTONS ─── */
     .shop-stack { display: flex; flex-direction: column; gap: 10px; }
