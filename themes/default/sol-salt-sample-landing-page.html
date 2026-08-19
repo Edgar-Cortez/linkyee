@@ -17,11 +17,12 @@
       --sage:        #EF4E2C;
       --sage-light:  #FCE2DC;
       --sage-mid:    #C8372D;
+      --sage-deep:   #E2462C;
       --salt:        #f7F7F7;
       --salt-dark:   #EDE8DF;
       --ink:         #232323;
-      --ink-mid:     #4A4A46;
       --ink-light:   #8A8A84;
+      --ink-mid:     #4A4A46;
       --border:      #DDD8CE;
       --white:       #FFFFFF;
 
@@ -149,7 +150,7 @@
     /* ─── EXPLAIN CARDS ─── */
     .explain-stack { display: flex; flex-direction: column; gap: 10px; margin-bottom: 2rem; }
     .explain-card {
-      background: var(--white);
+      background: var(--salt);
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
       padding: 1.125rem 1.25rem;
@@ -355,7 +356,7 @@
   margin-top: 2px !important;
 }
 .sendfox-embed-card button[type="submit"]:hover {
-  background: #E2462C !important;
+  background: var(--sage-deep) !important;
 }
 .sendfox-embed-card button[type="submit"]:active {
   transform: scale(0.98) !important;
