@@ -576,7 +576,14 @@
         object-fit: cover;
         display: block;
       }
-
+      .video-wrap iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+      }
       /* Play button overlay */
       .play-overlay {
         position: absolute;
@@ -772,11 +779,14 @@
           <iframe
             src="https://www.youtube-nocookie.com/embed/pxvkS6j2nX0?rel=0&modestbranding=1&color=white&enablejsapi=1&playsinline=1"
             title="SOL Salt — Quick How-To"
+            width="436"
+            height="530"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
             loading="lazy"
-            aria-label="SOL Salt quick how-to video"
+            style="position:absolute; inset:0; width:100%; height:100%; border:none;"
+            aria-label="Sol Salt quick how-to video"
           ></iframe>
         </div>
 
