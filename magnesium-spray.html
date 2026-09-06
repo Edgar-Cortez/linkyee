@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sol Salt Magnesium Spray — Quick How-To</title>
+    <meta
+      name="description"
+      content="You just tried the Sol Salt Magnesium Spray. Here's exactly how to use it, what to expect, and how to get the most out of it."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&amp;family=Google+Sans+Flex:opsz,wght@6..144,1..1000&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ─── TOKENS ─── */
+      :root {
+        --sage: #ef4e2c;
+        --sage-light: #fce2dc;
+        --sage-mid: #c8372d;
+        --sage-deep: #e2462c;
+        --salt: #f7f7f7;
+        --salt-dark: #ede8df;
+        --ink: #232323;
+        --ink-light: #8a8a84;
+        --ink-mid: #4a4a46;
+        --border: #ddd8ce;
+        --white: #ffffff;
+
+        --display: "Elms Sans", Georgia, serif;
+        --body: "Google Sans Flex", system-ui, sans-serif;
+
+        --radius-sm: 6px;
+        --radius-md: 12px;
+        --radius-lg: 18px;
+        --radius-pill: 100px;
+
+        --max-w: 480px;
+      }
+
+      /* ─── RESET ─── */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+      button,
+      input {
+        font: inherit;
+      }
+
+      /* ─── BASE ─── */
+      body {
+        font-family: var(--body);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.6;
+        background: var(--white);
+        color: var(--ink);
+        min-height: 100vh;
+      }
+
+      /* ─── LAYOUT ─── */
+      .page {
+        max-width: var(--max-w);
+        margin: 0 auto;
+        padding: 2.5rem 1.375rem 4rem;
+      }
+
+      /* ─── WORDMARK ─── */
+      .wordmark {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 2.5rem;
+      }
+      .wordmark-glyph {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--sage);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .wordmark-glyph svg {
+        width: 14px;
+        height: 14px;
+      }
+      .wordmark-text {
+        font-family: var(--body);
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        color: var(--ink-mid);
+        text-transform: uppercase;
+      }
+
+      /* ─── BADGE ─── */
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--sage-light);
+        color: var(--sage);
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        padding: 5px 12px;
+        border-radius: var(--radius-pill);
+        margin-bottom: 1.25rem;
+      }
+      .badge-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--sage);
+      }
+
+      /* ─── HERO ─── */
+      .hero-headline {
+        font-family: var(--display);
+        font-size: clamp(34px, 8vw, 44px);
+        font-weight: 500;
+        line-height: 1.1;
+        color: var(--ink);
+        margin-bottom: 1rem;
+        letter-spacing: -0.01em;
+      }
+      .hero-headline em {
+        font-style: italic;
+        color: var(--sage);
+      }
+      .hero-sub {
+        font-size: 16px;
+        color: var(--ink-mid);
+        line-height: 1.7;
+        margin-bottom: 2.25rem;
+        font-weight: 300;
+      }
+
+      /* ─── DIVIDER ─── */
+      .divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 2rem 0;
+      }
+
+      /* ─── SECTION LABEL ─── */
+      .section-label {
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-light);
+        margin-bottom: 1rem;
+      }
+
+      /* ─── EXPLAIN CARDS ─── */
+      .explain-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 2rem;
+      }
+      .explain-card {
+        background: var(--salt);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 1.125rem 1.25rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .explain-card::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: var(--sage);
+        border-radius: 0 2px 2px 0;
+      }
+      .explain-title {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--ink);
+        margin-bottom: 4px;
+      }
+      .explain-body {
+        font-size: 14px;
+        color: var(--ink-mid);
+        line-height: 1.65;
+        font-weight: 300;
+      }
+
+      /* ─── PRODUCT ROW ─── */
+      .product-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 2rem;
+      }
+      .product-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .product-row:last-child {
+        border-bottom: none;
+      }
+      .product-swatch {
+        width: 36px;
+        height: 36px;
+        border-radius: var(--radius-sm);
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .product-name {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--ink);
+        margin-bottom: 3px;
+      }
+      .product-tag {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        background: var(--sage-light);
+        color: var(--sage);
+        padding: 2px 7px;
+        border-radius: var(--radius-pill);
+        margin-left: 6px;
+        vertical-align: middle;
+      }
+      .product-desc {
+        font-size: 13px;
+        color: var(--ink-mid);
+        line-height: 1.55;
+        font-weight: 300;
+      }
+
+      /* ─── CTA BLOCK ─── */
+      .cta-block {
+        background: var(--ink);
+        border-radius: var(--radius-lg);
+        padding: 1.75rem 1.5rem;
+        margin: 2rem 0;
+      }
+      .cta-headline {
+        font-family: var(--display);
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--white);
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+      }
+      .cta-sub {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 1.65;
+        margin-bottom: 1.375rem;
+        font-weight: 300;
+      }
+      .input-row {
+        display: flex;
+        gap: 8px;
+      }
+      .email-input {
+        flex: 1;
+        height: 44px;
+        padding: 0 14px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: var(--radius-sm);
+        color: var(--white);
+        font-size: 14px;
+        font-weight: 300;
+        outline: none;
+        transition: border-color 0.15s;
+      }
+      .email-input::placeholder {
+        color: rgba(255, 255, 255, 0.38);
+      }
+      .email-input:focus {
+        border-color: var(--sage-mid);
+      }
+      .submit-btn {
+        height: 44px;
+        padding: 0 18px;
+        background: var(--sage);
+        color: var(--white);
+        border: none;
+        border-radius: var(--radius-sm);
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        white-space: nowrap;
+        transition:
+          background 0.15s,
+          transform 0.1s;
+        letter-spacing: 0.01em;
+      }
+      .submit-btn:hover {
+        background: #e2462c;
+      }
+      .submit-btn:active {
+        transform: scale(0.98);
+      }
+      .cta-privacy {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.38);
+        margin-top: 10px;
+        font-weight: 300;
+      }
+
+      /* ─── SENDFOX OVERRIDES ─── */
+
+      /* Wrapper card — strip SendFox's white card so it sits
+    inside the dark CTA block instead of floating over it */
+      .sendfox-embed-card {
+        background: transparent !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        font-family: var(--body) !important;
+        color: var(--white) !important;
+      }
+
+      /* Labels */
+      .sendfox-embed-card label {
+        font-family: var(--body) !important;
+        font-size: 13px !important;
+        font-weight: 400 !important;
+        color: rgba(255, 255, 255, 0.65) !important;
+        margin-bottom: 4px !important;
+      }
+
+      /* Text and email inputs */
+      .sendfox-embed-card input[type="text"],
+      .sendfox-embed-card input[type="email"] {
+        width: 100% !important;
+        height: 44px !important;
+        padding: 0 14px !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        border-radius: 6px !important;
+        color: var(--white) !important;
+        font-family: var(--body) !important;
+        font-size: 14px !important;
+        font-weight: 300 !important;
+        box-sizing: border-box !important;
+        transition: border-color 0.15s !important;
+      }
+      .sendfox-embed-card input[type="text"]::placeholder,
+      .sendfox-embed-card input[type="email"]::placeholder {
+        color: rgba(255, 255, 255, 0.38) !important;
+      }
+      .sendfox-embed-card input[type="text"]:focus,
+      .sendfox-embed-card input[type="email"]:focus {
+        border-color: var(--sage-mid) !important;
+        outline: none !important;
+      }
+
+      /* GDPR checkbox row */
+      .sendfox-embed-card input[type="checkbox"] {
+        accent-color: var(--sage) !important;
+      }
+
+      /* Submit button */
+      .sendfox-embed-card button[type="submit"] {
+        width: 100% !important;
+        height: 46px !important;
+        padding: 0 18px !important;
+        background: var(--sage) !important;
+        color: var(--white) !important;
+        border: none !important;
+        border-radius: 6px !important;
+        font-family: var(--body) !important;
+        font-size: 15px !important;
+        font-weight: 500 !important;
+        cursor: pointer !important;
+        letter-spacing: 0.01em !important;
+        transition: background 0.15s !important;
+        margin-top: 2px !important;
+      }
+      .sendfox-embed-card button[type="submit"]:hover {
+        background: var(--sage-deep) !important;
+      }
+      .sendfox-embed-card button[type="submit"]:active {
+        transform: scale(0.98) !important;
+      }
+
+      /* ─── SENDFOX SUCCESS STATE ─── */
+
+      /* Strip the card wrapper — same as the form state */
+      .sendfox-embed-card > div[style*="flex-direction: column"] {
+        background: transparent !important;
+        padding: 8px 0 !important;
+        gap: 14px !important;
+      }
+
+      /* Checkmark circle — swap red for sage */
+      .sendfox-embed-card
+        > div[style*="flex-direction: column"]
+        > div[style*="border-radius: 50%"] {
+        background: var(--sage) !important;
+        width: 48px !important;
+        height: 48px !important;
+        box-shadow: 0 0 0 8px rgb(226 70 44 / 15%) !important;
+      }
+
+      /* Success message text */
+      .sendfox-embed-card
+        > div[style*="flex-direction: column"]
+        > div[style*="font-size"] {
+        font-family: var(--body) !important;
+        font-size: 15px !important;
+        font-weight: 400 !important;
+        color: rgba(255, 255, 255, 0.85) !important;
+        line-height: 1.5 !important;
+        letter-spacing: 0.01em !important;
+      }
+
+      /* ─── SHOP BUTTONS ─── */
+      .shop-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .shop-btn {
+        display: block;
+        width: 100%;
+        padding: 14px 20px;
+        border-radius: var(--radius-md);
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        transition:
+          background 0.15s,
+          transform 0.1s,
+          border-color 0.15s;
+        letter-spacing: 0.01em;
+      }
+      .shop-btn:active {
+        transform: scale(0.98);
+      }
+      .shop-btn.primary {
+        background: var(--sage);
+        color: var(--white);
+        border: none;
+      }
+      .shop-btn.primary:hover {
+        background: #e2462c;
+      }
+      .shop-btn.secondary {
+        background: transparent;
+        color: var(--ink-mid);
+        border: 1px solid var(--border);
+      }
+      .shop-btn.secondary:hover {
+        border-color: var(--sage-mid);
+        color: var(--sage);
+      }
+
+      /* ─── FOOTER ─── */
+      .footer {
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+        text-align: center;
+      }
+      .footer-sig {
+        font-family: var(--display);
+        font-size: 18px;
+        font-style: italic;
+        color: var(--ink-mid);
+        margin-bottom: 6px;
+      }
+      .footer-sub {
+        font-size: 12px;
+        color: var(--ink-light);
+        font-weight: 300;
+        line-height: 1.6;
+      }
+
+      /* ─── SUCCESS STATE ─── */
+      .success-msg {
+        display: none;
+        background: var(--sage-light);
+        border: 1px solid var(--sage-mid);
+        border-radius: var(--radius-sm);
+        padding: 12px 16px;
+        margin-top: 10px;
+        font-size: 13px;
+        color: var(--sage);
+        font-weight: 400;
+      }
+
+      /* ─── MOTION ─── */
+      @media (prefers-reduced-motion: no-preference) {
+        .explain-card {
+          opacity: 0;
+          transform: translateY(12px);
+          animation: fadeUp 0.45s ease forwards;
+        }
+        .explain-card:nth-child(2) {
+          animation-delay: 0.08s;
+        }
+        .explain-card:nth-child(3) {
+          animation-delay: 0.16s;
+        }
+
+        @keyframes fadeUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+
+      /* ─── VIDEO SECTION — SELF-HOSTED ─── */
+      .video-section {
+        margin-bottom: 2.25rem;
+      }
+      .video-label {
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-light);
+        margin-bottom: 0.75rem;
+      }
+      .video-wrap {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 9 / 16;
+        background: var(--ink);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        max-height: 540px;
+      }
+      .video-wrap video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Play button overlay */
+      .play-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        background: rgba(26, 26, 24, 0.42);
+        border: none;
+        cursor: pointer;
+        transition: background 0.2s;
+        padding: 0;
+      }
+      .play-overlay:hover {
+        background: rgba(26, 26, 24, 0.25);
+      }
+      .play-overlay.hidden {
+        display: none;
+      }
+      .play-circle {
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background: var(--sage);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 0 12px rgba(239, 78, 44, 0.22);
+        transition:
+          transform 0.15s,
+          box-shadow 0.15s;
+      }
+      .play-overlay:hover .play-circle {
+        transform: scale(1.06);
+        box-shadow: 0 0 0 16px rgba(239, 78, 44, 0.22);
+      }
+      .play-circle svg {
+        margin-left: 3px;
+      } /* optical centre for play icon */
+      .play-label {
+        font-family: var(--body);
+        font-size: 11px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.82);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      /* Progress bar */
+      .video-progress-wrap {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: rgba(255, 255, 255, 0.15);
+      }
+      .video-progress-bar {
+        height: 100%;
+        width: 0%;
+        background: var(--sage);
+        transition: width 0.25s linear;
+      }
+
+      /* CTA nudge — hidden until video ends */
+      .video-cta {
+        display: none;
+        margin-top: 1rem;
+        background: var(--sage-light);
+        border: 1px solid var(--sage-mid);
+        border-radius: var(--radius-md);
+        padding: 1.125rem 1.25rem;
+        align-items: center;
+        gap: 14px;
+        animation: fadeUp 0.4s ease forwards;
+      }
+      .video-cta.visible {
+        display: flex;
+      }
+      .video-cta-text {
+        font-size: 13px;
+        color: var(--sage-dark);
+        font-weight: 300;
+        line-height: 1.5;
+        flex: 1;
+      }
+      .video-cta-btn {
+        flex-shrink: 0;
+        padding: 9px 16px;
+        background: var(--sage);
+        color: var(--white);
+        border: none;
+        border-radius: var(--radius-pill);
+        font-family: var(--body);
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        letter-spacing: 0.01em;
+        white-space: nowrap;
+        transition:
+          background 0.15s,
+          transform 0.1s;
+      }
+      .video-cta-btn:hover {
+        background: #e2462c;
+      }
+      .video-cta-btn:active {
+        transform: scale(0.97);
+      }
+
+      /* ─── RESPONSIVE ─── */
+      @media (max-width: 400px) {
+        .input-row {
+          flex-direction: column;
+        }
+        .submit-btn {
+          width: 100%;
+          height: 42px;
+        }
+        .video-cta {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .video-cta-btn {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="page" role="main">
+      <!-- Wordmark -->
+      <div class="wordmark" aria-label="SOL SALT MAGNESIUM">
+        <div class="wordmark-glyph" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #fff;
+                }
+              </style>
+            </defs>
+            <g
+              transform="matrix(2.723015, 0, 0, 2.723015, -0.027216, -0.013637)"
+            >
+              <path
+                class="cls-1"
+                d="M183.63,66.21v16.38c-55.71,0-101.04,45.32-101.04,101.04h0s-16.38,0-16.38,0h0c0-64.75,52.67-117.42,117.42-117.42Z"
+                style=""
+              ></path>
+              <path
+                class="cls-1"
+                d="M183.63,93.51v27.73c0,.86-.68,1.55-1.54,1.58-32.37.8-58.47,26.9-59.27,59.27-.02.86-.72,1.54-1.58,1.54h-27.73c0-49.69,40.43-90.11,90.11-90.11Z"
+                style=""
+              ></path>
+              <path
+                class="cls-1"
+                d="M183.63,5v50.28c-70.77,0-128.34,57.58-128.34,128.34h0s-50.28,0-50.28,0c-2.76,0-5-2.24-5-5V5C0,2.24,2.24,0,5,0h173.63c2.76,0,5,2.24,5,5Z"
+                style=""
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <span class="wordmark-text">SOL SALT MAGNESIUM</span>
+      </div>
+
+      <!-- Badge -->
+      <div class="badge" aria-label="Sol Salt Magnesium Spray">
+        <span class="badge-dot" aria-hidden="true"></span>
+        Magnesium Spray
+      </div>
+
+      <!-- Hero -->
+      <h1 class="hero-headline">
+        Here's exactly how<br />
+        to use the<br />
+        <em>spray.</em>
+      </h1>
+      <p class="hero-sub">
+        Most people spray and walk away. The ones who get the best results know
+        two extra things — where to apply it and when. Watch the clip below,
+        then keep reading.
+      </p>
+
+      <!-- Self-Hosted How-To Video -->
+      <div class="video-section">
+        <p class="video-label">How to use the spray — 45 sec</p>
+        <div class="video-wrap">
+          <!--
+            FILE SETUP:
+            Place your video files in an /assets/ folder
+            alongside this HTML file. Two formats covers
+            every modern browser:
+              assets/sol-salt-howto.mp4   (primary — H.264)
+              assets/sol-salt-howto.webm  (fallback — VP9, smaller file)
+
+            POSTER IMAGE:
+            A single frame shown before play — ideally your
+            first frame or a clean product shot:
+              assets/sol-salt-poster.jpg
+
+            COMPRESSION TARGETS for a 45-60 sec vertical clip:
+              MP4  — H.264, CRF 28, 1080x1920, under 8MB
+              WebM — VP9,  CRF 33, 1080x1920, under 5MB
+            Handbrake (free) handles both exports cleanly.
+          -->
+          <video
+            id="howto-video"
+            playsinline
+            preload="metadata"
+            poster="images\poster.jpg"
+            aria-label="Sol Salt Magnesium Spray — how to use it"
+          >
+            <source src="media\introduction-video.mp4" />
+            <!-- <source src="media/sol-salt-spray-howto.mp4"  type="video/mp4" /> -->
+            <!-- <source src="media/sol-salt-spray-howto.webm" type="video/webm" /> -->
+            <p style="color: #fff; padding: 1rem; font-size: 14px">
+              Your browser doesn't support embedded video.
+              <a
+                href="media\introduction-video.mp4"
+                style="color: var(--sage-mid)"
+              >
+                <!-- <a href="media/sol-salt-spray-howto.mp4" style="color:var(--sage-mid);"> -->
+                Download the clip instead.
+              </a>
+            </p>
+          </video>
+
+          <!-- Play overlay -->
+          <button
+            class="play-overlay"
+            id="play-btn"
+            aria-label="Play spray how-to video"
+          >
+            <div class="play-circle" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M7 4.5l13 6.5L7 17.5V4.5z" fill="#ffffff" />
+              </svg>
+            </div>
+            <span class="play-label">How to use it — 45 sec</span>
+          </button>
+
+          <!-- Progress bar -->
+          <div class="video-progress-wrap" aria-hidden="true">
+            <div class="video-progress-bar" id="progress-bar"></div>
+          </div>
+        </div>
+
+        <!-- CTA nudge — appears when video ends -->
+        <div class="video-cta" id="video-cta" aria-live="polite">
+          <p class="video-cta-text">
+            Want a spray usage guide plus a discount on your first full bottle?
+          </p>
+          <button
+            class="video-cta-btn"
+            onclick="
+              document
+                .querySelector('.cta-block')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+            aria-label="Scroll to email signup for spray discount"
+          >
+            Get the discount ↓
+          </button>
+        </div>
+      </div>
+
+      <!-- Explain Cards -->
+      <p class="section-label">What you felt — explained</p>
+      <div class="explain-stack" role="list">
+        <div class="explain-card" role="listitem">
+          <p class="explain-title">The tingling</p>
+          <p class="explain-body">
+            That's magnesium ions crossing the skin barrier and activating nerve
+            receptors. It's more noticeable when your magnesium levels are low —
+            which is extremely common, especially in pregnancy and postpartum.
+          </p>
+        </div>
+
+        <div class="explain-card" role="listitem">
+          <p class="explain-title">Why it works faster than a supplement</p>
+          <p class="explain-body">
+            Oral magnesium has to survive your digestive system first. Topical
+            magnesium absorbs directly through the skin, bypassing that process
+            entirely — which is also why it doesn't cause the stomach issues
+            many supplements do.
+          </p>
+        </div>
+
+        <div class="explain-card" role="listitem">
+          <p class="explain-title">
+            Why it keeps working after you stop feeling it
+          </p>
+          <p class="explain-body">
+            The tingling fades as your levels stabilize. That's not the product
+            wearing off — that's it doing its job. Most people notice the
+            difference most clearly in sleep quality and muscle tension within
+            the first week.
+          </p>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Product Lineup -->
+      <p class="section-label">
+        You sampled the <strong>spray</strong> — here's the full lineup
+      </p>
+      <div class="product-list" role="list">
+        <div class="product-row" role="listitem">
+          <div
+            class="product-swatch"
+            style="
+              background: linear-gradient(135deg, #fce2dc 0%, #fac4b9 100%);
+            "
+            aria-hidden="true"
+          ></div>
+          <div>
+            <p class="product-name">
+              Spray<span class="product-tag">What you tried</span>
+            </p>
+            <p class="product-desc">
+              Fast absorption, ideal for legs, feet, and anywhere you need quick
+              relief. Best for nighttime cramps and restless legs.
+            </p>
+          </div>
+        </div>
+
+        <div class="product-row" role="listitem">
+          <div
+            class="product-swatch"
+            style="
+              background: linear-gradient(135deg, #fac4b9 0%, #ef4e2c 100%);
+            "
+            aria-hidden="true"
+          ></div>
+          <div>
+            <p class="product-name">Gel</p>
+            <p class="product-desc">
+              Thicker consistency for targeted muscle areas. Great for
+              postpartum recovery, back tension, and sport soreness.
+            </p>
+          </div>
+        </div>
+
+        <div class="product-row" role="listitem">
+          <div
+            class="product-swatch"
+            style="
+              background: linear-gradient(135deg, #ef4e2c 0%, #c8372d 100%);
+            "
+            aria-hidden="true"
+          ></div>
+          <div>
+            <p class="product-name">Cream</p>
+            <p class="product-desc">
+              Daily maintenance with a skin-nourishing finish. Best for
+              sensitive skin or anyone who wants a gentle, everyday option.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Email Capture -->
+
+      <div class="cta-block">
+        <h2 class="cta-headline">Get the most out of it</h2>
+        <p class="cta-sub">
+          We'll send a short usage guide plus a discount on your first full
+          order — the one we wish we'd had when we started this.
+        </p>
+        <form onsubmit="handleSubmit(event)" novalidate>
+          <script
+            src="https://cdn.sendfox.com/js/embed.js"
+            data-form="1v867d"
+            data-api="https://sendfox.com"
+            async
+          ></script>
+          <p class="cta-privacy">
+            No spam. Unsubscribe anytime. We're a small brand — we actually read
+            replies.
+          </p>
+        </form>
+      </div>
+
+      <!-- Shop Buttons -->
+      <p class="section-label">Ready to order?</p>
+      <div class="shop-stack">
+        <a
+          href="https://www.thesolsalt.com/products/magnesium-oil-spray/?utm_source=qr_code&utm_medium=offline&utm_campaign=product_label&utm_content=spray_landing_page"
+          class="shop-btn primary"
+          role="button"
+          >Shop the Magensium Spray</a
+        >
+        <!-- Create FAQ Playlist -->
+        <a
+          href="https://www.youtube.com/playlist?list=PLEwX4fb5Oss8"
+          class="shop-btn secondary"
+          role="button"
+          >Watch the FAQ videos first →</a
+        >
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p class="footer-sig">Edgar &amp; Julie</p>
+        <p class="footer-sub">
+          Made by a husband and wife in DFW.<br />
+          Built because we needed it and nothing else existed.
+        </p>
+      </footer>
+    </main>
+    <script>
+      /* ─── VIDEO CONTROLS ─── */
+      var video = document.getElementById("howto-video");
+      var playBtn = document.getElementById("play-btn");
+      var progressBar = document.getElementById("progress-bar");
+      var videoCta = document.getElementById("video-cta");
+
+      // Tap play overlay → start video, hide overlay
+      playBtn.addEventListener("click", function () {
+        video.play();
+        playBtn.classList.add("hidden");
+      });
+
+      // Tap video while playing → pause, show overlay again
+      video.addEventListener("click", function () {
+        if (!video.paused) {
+          video.pause();
+        }
+      });
+
+      // Show overlay again on pause (unless ended)
+      video.addEventListener("pause", function () {
+        if (!video.ended) {
+          playBtn.classList.remove("hidden");
+        }
+      });
+
+      // Tick the progress bar as the video plays
+      video.addEventListener("timeupdate", function () {
+        if (video.duration) {
+          var pct = (video.currentTime / video.duration) * 100;
+          progressBar.style.width = pct + "%";
+        }
+      });
+
+      // When video ends — show the CTA nudge and scroll it into view
+      video.addEventListener("ended", function () {
+        playBtn.classList.add("hidden");
+        progressBar.style.width = "100%";
+        videoCta.classList.add("visible");
+        videoCta.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+    </script>
+  </body>
+</html>
