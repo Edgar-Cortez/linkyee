@@ -17,6 +17,8 @@
       rel="stylesheet"
     />
 
+    <script src="https://www.youtube.com/iframe_api"></script>
+
     <style>
       /* ─── TOKENS ─── */
       :root {
@@ -781,6 +783,7 @@
             https://youtube.com/playlist?list=PLREbXQ5Piaiw&si=w9iLJ_lvX1givLqu
           -->
           <iframe
+            id="yt-player"
             src="https://www.youtube-nocookie.com/embed/pxvkS6j2nX0?rel=0&modestbranding=1&color=white&enablejsapi=1&playsinline=1&loop=0"
             title="Sol Salt — Quick How-To"
             width="315"
@@ -792,86 +795,6 @@
             <!--style="position:absolute; inset:0; width:100%; height:100%; border:none;"-->
             aria-label="Sol Salt Magnesium Gel — how to use it"
           ></iframe>
-        </div>
-
-        <!-- CTA nudge beneath the video -->
-        <div class="video-cta">
-          <p class="video-cta-text">
-            Want the full usage guide plus a discount on your first order?
-          </p>
-          <button
-            class="video-cta-btn"
-            onclick="document.querySelector('.cta-block').scrollIntoView({behavior:'smooth'})"
-            aria-label="Scroll to email signup for discount"
-          >
-            Get the discount ↓
-          </button>
-        </div>
-      </div>
-
-      <!-- Self-Hosted How-To Video -->
-      <div class="video-section">
-        <p class="video-label">How to use the magnesium gel — 45 sec</p>
-        <div class="video-wrap">
-          <!--
-            FILE SETUP:
-            Place your video files in an /assets/ folder
-            alongside this HTML file. Two formats covers
-            every modern browser:
-              assets/sol-salt-howto.mp4   (primary — H.264)
-              assets/sol-salt-howto.webm  (fallback — VP9, smaller file)
-
-            POSTER IMAGE:
-            A single frame shown before play — ideally your
-            first frame or a clean product shot:
-              assets/sol-salt-poster.jpg
-
-            COMPRESSION TARGETS for a 45-60 sec vertical clip:
-              MP4  — H.264, CRF 28, 1080x1920, under 8MB
-              WebM — VP9,  CRF 33, 1080x1920, under 5MB
-            Handbrake (free) handles both exports cleanly.
-          -->
-          <video
-            id="howto-video"
-            playsinline
-            preload="metadata"
-            poster="images\poster.jpg"
-            aria-label="Sol Salt Magnesium Gel — how to use it"
-          >
-            <source src="media\introduction-video.mp4" />
-            <!-- <source src="media/sol-salt-magnesium-gel-howto.mp4"  type="video/mp4" /> -->
-            <!-- <source src="media/sol-salt-magnesium-gel-howto.webm" type="video/webm" /> -->
-            <p style="color: #fff; padding: 1rem; font-size: 14px">
-              Your browser doesn't support embedded video.
-              <a
-                href="media\introduction-video.mp4"
-                style="color: var(--sage-mid)"
-              >
-                <!-- <a href="media/sol-salt-magnesium-gel-howto.mp4" style="color:var(--sage-mid);"> -->
-                Download the clip instead.
-              </a>
-            </p>
-          </video>
-
-          <!-- Play overlay -->
-          <button
-            class="play-overlay"
-            id="play-btn"
-            aria-label="Play magnesium gel how-to video"
-          >
-            <div class="play-circle" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                <path d="M7 4.5l13 6.5L7 17.5V4.5z" fill="#ffffff" />
-              </svg>
-            </div>
-            <span class="play-label">How to use it — 45 sec</span
-            >
-          </button>
-
-          <!-- Progress bar -->
-          <div class="video-progress-wrap" aria-hidden="true">
-            <div class="video-progress-bar" id="progress-bar"></div>
-          </div>
         </div>
 
         <!-- CTA nudge — appears when video ends -->
@@ -892,6 +815,7 @@
           </button>
         </div>
       </div>
+
 
       <!-- Explain Cards -->
       <p class="section-label">Why the gel works the way it does</p>
@@ -1037,48 +961,50 @@
         </p>
       </footer>
     </main>
-    <script>
-      /* ─── VIDEO CONTROLS ─── */
-      var video = document.getElementById("howto-video");
-      var playBtn = document.getElementById("play-btn");
-      var progressBar = document.getElementById("progress-bar");
-      var videoCta = document.getElementById("video-cta");
 
-      // Tap play overlay → start video, hide overlay
-      playBtn.addEventListener("click", function () {
-        video.play();
-        playBtn.classList.add("hidden");
-      });
+    <script type="text/javascript">
+      console.log("hello");
 
-      // Tap video while playing → pause, show overlay again
-      video.addEventListener("click", function () {
-        if (!video.paused) {
-          video.pause();
+      var player;
+      var videoCta = document.getElementById('video-cta');
+
+      // ─── STEP 1 ───────────────────────────────────────────────
+      // YouTube calls this function automatically once the
+      // iframe_api script above has finished loading.
+      // It must be named exactly onYouTubeIframeAPIReady.
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('yt-player', {
+          // 'yt-player' matches the id on your iframe
+          events: {
+            onStateChange: onPlayerStateChange
+          }
+        });
+      }
+
+      // ─── STEP 2 ───────────────────────────────────────────────
+      // YouTube fires this every time the player state changes.
+      // YT.PlayerState.ENDED === 0
+      // Other states for reference:
+      //   -1  unstarted
+      //    1  playing
+      //    2  paused
+      //    3  buffering
+      //    5  video cued
+      function onPlayerStateChange(event) {
+        if (event.data === YT.PlayerState.ENDED) {
+          console.log("video ended");
+          showCta();
         }
-      });
+      }
 
-      // Show overlay again on pause (unless ended)
-      video.addEventListener("pause", function () {
-        if (!video.ended) {
-          playBtn.classList.remove("hidden");
-        }
-      });
-
-      // Tick the progress bar as the video plays
-      video.addEventListener("timeupdate", function () {
-        if (video.duration) {
-          var pct = (video.currentTime / video.duration) * 100;
-          progressBar.style.width = pct + "%";
-        }
-      });
-
-      // When video ends — show the CTA nudge and scroll it into view
-      video.addEventListener("ended", function () {
-        playBtn.classList.add("hidden");
-        progressBar.style.width = "100%";
-        videoCta.classList.add("visible");
-        videoCta.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      });
+      // ─── STEP 3 ───────────────────────────────────────────────
+      // Makes the CTA visible and scrolls it into view.
+      // Separated into its own function so you can call it
+      // manually during testing: open the console and type showCta()
+      function showCta() {
+        videoCta.classList.add('visible');
+        videoCta.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
     </script>
   </body>
 </html>
