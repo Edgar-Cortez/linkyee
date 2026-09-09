@@ -784,7 +784,7 @@
           -->
           <iframe
             id="yt-player"
-            src="https://www.youtube.com/embed/pxvkS6j2nX0?rel=0&modestbranding=1&color=white&enablejsapi=1&playsinline=1"
+            src="https://www.youtube.com/embed/pxvkS6j2nX0?rel=0&modestbranding=1&color=white&enablejsapi=1&playsinline=1&loop=1"
             title="Sol Salt — Quick How-To"
             width="315"
             height="560"
@@ -966,41 +966,67 @@
 
       var player;
       var videoCta = document.getElementById('video-cta');
+      var ctaTimer = null;
+      var ctaShown = false;
 
-      // ─── STEP 1 ───────────────────────────────────────────────
-      // YouTube calls this function automatically once the
-      // iframe_api script above has finished loading.
-      // It must be named exactly onYouTubeIframeAPIReady.
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('yt-player', {
-          // 'yt-player' matches the id on your iframe
           events: {
-            onStateChange: onPlayerStateChange
+            onStateChange: onPlayerStateChange,
+            onReady: onPlayerReady
           }
         });
       }
 
-      // ─── STEP 2 ───────────────────────────────────────────────
-      // YouTube fires this every time the player state changes.
-      // YT.PlayerState.ENDED === 0
-      // Other states for reference:
-      //   -1  unstarted
-      //    1  playing
-      //    2  paused
-      //    3  buffering
-      //    5  video cued
+      // Log when the player is ready so you can confirm
+      // the API connected successfully before testing
+      function onPlayerReady(event) {
+        console.log('YT player ready — duration will be available once play starts');
+      }
+
       function onPlayerStateChange(event) {
+        // Log every state change so you can see exactly
+        // what the API is reporting in the console
+        console.log('Player state changed:', event.data);
+        // -1 = unstarted, 0 = ended, 1 = playing,
+        //  2 = paused,   3 = buffering, 5 = cued
+
+        if (event.data === YT.PlayerState.PLAYING) {
+          startCtaTimer();
+        }
+
+        if (event.data === YT.PlayerState.PAUSED) {
+          cancelCtaTimer();
+        }
+
         if (event.data === YT.PlayerState.ENDED) {
-          console.log("video ended");
+          cancelCtaTimer();
           showCta();
         }
       }
 
-      // ─── STEP 3 ───────────────────────────────────────────────
-      // Makes the CTA visible and scrolls it into view.
-      // Separated into its own function so you can call it
-      // manually during testing: open the console and type showCta()
+      function startCtaTimer() {
+        if (ctaShown) return;
+        if (ctaTimer) return;
+
+        // 15 seconds — fires before the 17 second video ends
+        // which sidesteps the short-video early-stop quirk
+        ctaTimer = setTimeout(function () {
+          showCta();
+        }, 15000);
+      }
+
+      function cancelCtaTimer() {
+        if (ctaTimer) {
+          clearTimeout(ctaTimer);
+          ctaTimer = null;
+        }
+      }
+
       function showCta() {
+        if (ctaShown) return;
+        ctaShown = true;
+        cancelCtaTimer();
         videoCta.classList.add('visible');
         videoCta.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
