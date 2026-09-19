@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOL SALT — Magnesium, Absorbed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&amp;family=Google+Sans+Flex:opsz,wght@6..144,1..1000&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #1f2a28;
+        --teal: #233833;
+        --teal-deep: #16211e;
+        --sand: #efe8d9;
+        --sand-soft: #f7f3e9;
+        --salt-pink: #e2a491;
+        --sage: #93a78c;
+        --gold: #c9a15a;
+        --line: rgba(239, 232, 217, 0.18);
+
+        --display: "Elms Sans", Georgia, serif;
+        --body: "Google Sans Flex", system-ui, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: var(--body), sans-serif;
+        background: var(--sand-soft);
+        color: var(--ink);
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3,
+      .disp {
+        font-family: var(--display), serif;
+        font-weight: 450;
+        letter-spacing: -0.01em;
+      }
+      .eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--gold);
+      }
+      a {
+        color: inherit;
+      }
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 28px;
+      }
+      section {
+        padding: 96px 0;
+      }
+
+      /* Salt-flat texture divider */
+      .flat-divider {
+        height: 64px;
+        width: 100%;
+        background:
+          linear-gradient(var(--sand-soft), var(--sand-soft)) top,
+          repeating-linear-gradient(
+            100deg,
+            transparent 0 46px,
+            var(--line) 46px 47px
+          );
+        position: relative;
+      }
+
+      /* NAV */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(247, 243, 233, 0.9);
+        backdrop-filter: blur(6px);
+        border-bottom: 1px solid rgba(31, 42, 40, 0.08);
+      }
+      nav .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 18px;
+        padding-bottom: 18px;
+      }
+      .navlinks {
+        display: flex;
+        gap: 28px;
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+      .navlinks a {
+        text-decoration: none;
+        opacity: 0.75;
+        transition: opacity 0.2s;
+      }
+      .navlinks a:hover {
+        opacity: 1;
+      }
+      .nav-cta {
+        background: var(--teal);
+        color: var(--sand-soft);
+        padding: 10px 20px;
+        border-radius: 2px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      /* .wordmark {
+          font-family: var(--display), serif;
+          font-size: 1.15rem;
+          font-weight: 600;
+          letter-spacing: 0.02em;
+        }
+        .wordmark span {
+          color: var(--salt-pink);
+        } */
+      /* ─── WORDMARK ─── */
+      .wordmark {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        /* margin-bottom: 2.5rem; */
+      }
+      .wordmark-glyph {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--sage);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .wordmark-glyph svg {
+        width: 14px;
+        height: 14px;
+      }
+      .wordmark-text {
+        font-family: var(--body);
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        color: var(--ink-mid);
+        text-transform: uppercase;
+      }
+
+      /* HERO */
+      .hero {
+        background: radial-gradient(
+          ellipse 900px 500px at 75% -10%,
+          #2f4a42 0%,
+          var(--teal) 45%,
+          var(--teal-deep) 100%
+        );
+        color: var(--sand-soft);
+        padding: 120px 0 100px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero .wrap {
+        position: relative;
+        z-index: 2;
+        max-width: 720px;
+      }
+      .hero .eyebrow {
+        color: var(--salt-pink);
+      }
+      .hero h1 {
+        font-size: clamp(2.4rem, 5vw, 3.6rem);
+        line-height: 1.08;
+        margin: 18px 0 22px;
+        color: var(--sand-soft);
+      }
+      .hero p.lede {
+        font-size: 1.08rem;
+        line-height: 1.6;
+        color: rgba(239, 232, 217, 0.82);
+        max-width: 520px;
+        margin-bottom: 36px;
+      }
+      .cta-row {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        background: var(--salt-pink);
+        color: var(--teal-deep);
+        font-weight: 600;
+        padding: 14px 26px;
+        border-radius: 2px;
+        text-decoration: none;
+        font-size: 0.92rem;
+        display: inline-block;
+      }
+      .btn-ghost {
+        border: 1px solid rgba(239, 232, 217, 0.4);
+        color: var(--sand-soft);
+        padding: 14px 26px;
+        border-radius: 2px;
+        text-decoration: none;
+        font-size: 0.92rem;
+        display: inline-block;
+      }
+
+      /* crystal signature graphic — dissolving mineral lattice */
+      .crystals {
+        position: absolute;
+        right: -40px;
+        top: 0;
+        bottom: 0;
+        width: 480px;
+        z-index: 1;
+        opacity: 0.9;
+      }
+
+      /* SECTION: belief */
+      .belief .wrap {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 60px;
+        align-items: start;
+      }
+      .belief h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin: 14px 0 20px;
+      }
+      .belief-points {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+      }
+      .belief-point {
+        border-left: 2px solid var(--sage);
+        padding-left: 20px;
+      }
+      .belief-point h3 {
+        font-size: 1.02rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      .belief-point p {
+        font-size: 0.94rem;
+        line-height: 1.55;
+        opacity: 0.8;
+      }
+
+      /* SECTION: origin */
+      .origin {
+        background: var(--sand);
+      }
+      .origin .wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: center;
+      }
+      .origin-photo {
+        aspect-ratio: 4/5;
+        border-radius: 2px;
+        background: linear-gradient(160deg, #d9c9ae, #cbbfa0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #6b6250;
+        border: 1px solid rgba(31, 42, 40, 0.1);
+      }
+      .origin h2 {
+        font-size: 1.9rem;
+        margin: 14px 0 18px;
+        line-height: 1.22;
+      }
+      .origin p {
+        font-size: 0.98rem;
+        line-height: 1.65;
+        margin-bottom: 16px;
+        opacity: 0.85;
+      }
+      .signature {
+        font-family: var(--display), serif;
+        font-style: italic;
+        font-size: 1rem;
+        margin-top: 20px;
+      }
+
+      /* SECTION: moments (products grouped by life moment, not SKU dump) */
+      .moments .wrap > .eyebrow {
+        display: block;
+        text-align: center;
+      }
+      .moments h2 {
+        text-align: center;
+        font-size: 2rem;
+        max-width: 640px;
+        margin: 14px auto 56px;
+        line-height: 1.25;
+      }
+      .moment-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .moment-card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        background: var(--sand-soft);
+        border: 1px solid rgba(31, 42, 40, 0.09);
+        padding: 30px 26px;
+        border-radius: 2px;
+      }
+      .moment-card .tag {
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--sage);
+        font-weight: 600;
+      }
+      .moment-card h3 {
+        font-size: 1.25rem;
+        margin: 12px 0 10px;
+      }
+      .moment-card p {
+        font-size: 0.92rem;
+        line-height: 1.55;
+        opacity: 0.78;
+        margin-bottom: 16px;
+      }
+      .moment-card .product {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--teal);
+      }
+      .moment-img {
+        aspect-ratio: 1/1;
+        border-radius: 2px;
+        margin-bottom: 18px;
+        overflow: hidden;
+        background: var(--sand);
+      }
+      .moment-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* SECTION: practitioners */
+      .practitioners {
+        background: var(--teal-deep);
+        color: var(--sand-soft);
+      }
+      .practitioners .wrap {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 56px;
+        align-items: center;
+      }
+      .practitioners .eyebrow {
+        color: var(--salt-pink);
+      }
+      .practitioners h2 {
+        font-size: 1.9rem;
+        margin: 14px 0 18px;
+        color: var(--sand-soft);
+        line-height: 1.25;
+      }
+      .practitioners p {
+        font-size: 0.98rem;
+        line-height: 1.65;
+        color: rgba(239, 232, 217, 0.78);
+        margin-bottom: 20px;
+      }
+      .prac-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .prac-list li {
+        font-size: 0.92rem;
+        padding-left: 22px;
+        position: relative;
+        opacity: 0.9;
+      }
+      .prac-list li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--gold);
+      }
+
+      /* SECTION: trust strip */
+      .trust {
+        padding: 64px 0;
+      }
+      .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        text-align: center;
+      }
+      .trust-item h3 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .trust-item p {
+        font-size: 0.85rem;
+        opacity: 0.72;
+        line-height: 1.5;
+      }
+
+      /* FOOTER */
+      footer {
+        background: var(--teal);
+        color: var(--sand-soft);
+        padding: 72px 0 40px;
+      }
+      .foot-top {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr 0.8fr;
+        gap: 48px;
+        margin-bottom: 56px;
+      }
+      footer h2 {
+        font-size: 1.6rem;
+        margin-bottom: 14px;
+        color: var(--sand-soft);
+        line-height: 1.25;
+      }
+      footer p {
+        font-size: 0.9rem;
+        opacity: 0.75;
+        line-height: 1.6;
+        margin-bottom: 18px;
+      }
+      .foot-col h4 {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--gold);
+        margin-bottom: 14px;
+      }
+      .foot-col a {
+        display: block;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        text-decoration: none;
+        margin-bottom: 10px;
+      }
+      .foot-col a:hover {
+        opacity: 1;
+      }
+      .newsletter {
+        display: flex;
+        gap: 0;
+        margin-top: 8px;
+        max-width: 340px;
+      }
+      .newsletter input {
+        flex: 1;
+        padding: 12px 14px;
+        border: 1px solid rgba(239, 232, 217, 0.3);
+        background: transparent;
+        color: var(--sand-soft);
+        font-family: inherit;
+        font-size: 0.85rem;
+        border-right: none;
+      }
+      .newsletter input::placeholder {
+        color: rgba(239, 232, 217, 0.5);
+      }
+      .newsletter button {
+        background: var(--salt-pink);
+        color: var(--teal-deep);
+        border: none;
+        padding: 0 20px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        cursor: pointer;
+      }
+      .foot-bottom {
+        border-top: 1px solid rgba(239, 232, 217, 0.15);
+        padding-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.78rem;
+        opacity: 0.6;
+      }
+
+      @media (max-width: 800px) {
+        section {
+          padding: 64px 0;
+        }
+        .belief .wrap,
+        .origin .wrap,
+        .practitioners .wrap,
+        .foot-top {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+        .moment-grid {
+          grid-template-columns: 1fr;
+        }
+        .trust-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .navlinks {
+          display: none;
+        }
+        .crystals {
+          display: none;
+        }
+        .hero {
+          padding: 80px 0 60px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="wrap">
+        <div class="wordmark" aria-label="SOL SALT MAGNESIUM">
+          <div class="wordmark-glyph" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #fff;
+                  }
+                </style>
+              </defs>
+              <g
+                transform="matrix(2.723015, 0, 0, 2.723015, -0.027216, -0.013637)"
+              >
+                <path
+                  class="cls-1"
+                  d="M183.63,66.21v16.38c-55.71,0-101.04,45.32-101.04,101.04h0s-16.38,0-16.38,0h0c0-64.75,52.67-117.42,117.42-117.42Z"
+                ></path>
+                <path
+                  class="cls-1"
+                  d="M183.63,93.51v27.73c0,.86-.68,1.55-1.54,1.58-32.37.8-58.47,26.9-59.27,59.27-.02.86-.72,1.54-1.58,1.54h-27.73c0-49.69,40.43-90.11,90.11-90.11Z"
+                ></path>
+                <path
+                  class="cls-1"
+                  d="M183.63,5v50.28c-70.77,0-128.34,57.58-128.34,128.34h0s-50.28,0-50.28,0c-2.76,0-5-2.24-5-5V5C0,2.24,2.24,0,5,0h173.63c2.76,0,5,2.24,5,5Z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <span class="wordmark-text">SOL SALT MAGNESIUM</span>
+        </div>
+        <div class="navlinks">
+          <a href="#belief">Why Transdermal</a>
+          <a href="#origin">Our Story</a>
+          <a href="#moments">Collection</a>
+          <a href="#practitioners">Partners</a>
+        </div>
+        <a
+          class="nav-cta"
+          href="https://www.thesolsalt.com/discount/WELCOME10?utm_source=github&utm_medium=social&utm_campaign=brand_awareness&utm_content=homepage_nav_link"
+          data-shopify-link
+          >Shop the Store →</a
+        >
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Topical Magnesium · Small-Batch · Rowlett, TX</div>
+        <h1>Magnesium, absorbed the way skin was built to take it in.</h1>
+        <p class="lede">
+          Sol Salt makes spray, gel, and cream magnesium for the moments oral
+          supplements can't reach — sore muscles, restless nights, and the deep
+          fatigue of caring for everyone but yourself.
+        </p>
+        <div class="cta-row">
+          <a
+            class="btn-primary"
+            href="https://www.thesolsalt.com/discount/WELCOME10?utm_source=github&utm_medium=social&utm_campaign=brand_awareness&utm_content=homepage_hero_link"
+            data-shopify-link
+            >Shop the Collection</a
+          >
+          <a class="btn-ghost" href="#origin">Read Our Story</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="flat-divider"></div>
+
+    <section class="belief" id="belief">
+      <div class="wrap">
+        <div>
+          <div class="eyebrow">Why Transdermal</div>
+          <h2>
+            Most people are magnesium-deficient — and pills are hard on the body
+            that needs it most.
+          </h2>
+          <p style="font-size: 0.98rem; line-height: 1.65; opacity: 0.8">
+            Oral magnesium has to survive digestion before it ever reaches tired
+            muscle or an unsettled nervous system, and for a lot of people that
+            trip ends in stomach upset before it ends in relief. Applied to
+            skin, magnesium bypasses the gut entirely — absorbed close to where
+            it's needed, without the trade-off.
+          </p>
+        </div>
+        <div class="belief-points">
+          <div class="belief-point">
+            <h3>Bypasses digestion</h3>
+            <p>
+              No capsules to metabolize, no gut lining to irritate — the mineral
+              goes on where you feel it.
+            </p>
+          </div>
+          <div class="belief-point">
+            <h3>Targeted, not systemic</h3>
+            <p>
+              Apply directly to a sore shoulder, tight calves, or the base of
+              the neck — relief where you actually need it.
+            </p>
+          </div>
+          <div class="belief-point">
+            <h3>Fits real routines</h3>
+            <p>
+              A spray after a workout, a gel before bed, a cream worked in
+              during a five-minute pause — no water, no timing it around meals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="origin" id="origin">
+      <div class="wrap">
+        <div class="origin-photo">Photo — Edgar &amp; Julie, Rowlett TX</div>
+        <div>
+          <div class="eyebrow">Our Story</div>
+          <h2>Built at our kitchen counter, for one person first.</h2>
+          <p>
+            Sol Salt started as something much smaller than a brand — a husband
+            trying to find real relief for his wife through pregnancy and
+            postpartum recovery, when so much of what was out there either
+            didn't work or wasn't gentle enough to trust on her skin.
+          </p>
+          <p>
+            What we landed on became Sol Salt: magnesium made simply, in small
+            batches, by the two of us — still tested on ourselves before it ever
+            reaches a shelf.
+          </p>
+          <p class="signature">— Edgar &amp; Julie, co-founders</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="flat-divider"></div>
+
+    <section class="moments" id="moments">
+      <div class="wrap">
+        <div class="eyebrow">The Collection</div>
+        <h2>
+          Three formats, built around real moments — not just a product lineup.
+        </h2>
+        <div class="moment-grid">
+          <a class="moment-card" href="/products/magnesium-spray">
+            <!-- Update to the Shopify Product URL -->
+            <div class="moment-img">
+              <img
+                src="./images/temporary-magnesium-spray-product.jpg"
+                alt="Sol Salt Magnesium Spray bottle"
+              />
+              <!-- <img
+                src="/images/magnesium-spray-product.jpg"
+                alt="Sol Salt Magnesium Spray bottle"
+              /> -->
+            </div>
+            <div class="tag">Fast Relief</div>
+            <h3>After the workout, after the shift</h3>
+            <p>
+              A fine mist for sore muscles and tired legs — spray on, no rubbing
+              required, absorbs in seconds.
+            </p>
+            <div class="product">→ Magnesium Spray</div>
+          </a>
+          <a class="moment-card" href="/products/magnesium-gel">
+            <!-- Update to the Shopify Product URL -->
+            <div class="moment-img">
+              <img
+                src="./images/temporary-magnesium-gel-product.jpg"
+                alt="Sol Salt Magnesium Gel bottle"
+              />
+              <!-- <img
+                src="/images/magnesium-gel-product.jpg"
+                alt="Sol Salt Magnesium Gel bottle"
+              /> -->
+            </div>
+            <div class="tag">Wind Down</div>
+            <h3>Before bed, after the baby's asleep</h3>
+            <p>
+              A targeted gel for restless nights and tension held in the neck
+              and shoulders — part of a real wind-down routine.
+            </p>
+            <div class="product">→ Magnesium Gel</div>
+          </a>
+          <a class="moment-card" href="/products/magnesium-cream">
+            <!-- Update to the Shopify Product URL -->
+            <div class="moment-img">
+              <img
+                src="./images/temporary-magnesium-cream-product.jpg"
+                alt="Sol Salt Magnesium Cream Jar"
+              />
+              <!-- <img
+                src="/images/magnesium-cream-product.jpg"
+                alt="Sol Salt Magnesium Cream Jar"
+              /> -->
+            </div>
+            <div class="tag">Daily Care</div>
+            <h3>The five minutes that are yours</h3>
+            <p>
+              A rich, everyday cream for postpartum recovery and daily
+              maintenance — gentle enough for sensitive, healing skin.
+            </p>
+            <div class="product">→ Magnesium Cream</div>
+          </a>
+          <!-- <div class="moment-card">
+            <div class="tag">Fast Relief</div>
+            <h3>After the workout, after the shift</h3>
+            <p>
+              A fine mist for sore muscles and tired legs — spray on, no rubbing
+              required, absorbs in seconds.
+            </p>
+            <div class="product">→ Magnesium Spray</div>
+          </div> 
+          <div class="moment-card">
+            <div class="tag">Wind Down</div>
+            <h3>Before bed, after the baby's asleep</h3>
+            <p>
+              A targeted gel for restless nights and tension held in the neck
+              and shoulders — part of a real wind-down routine.
+            </p>
+            <div class="product">→ Magnesium Gel</div>
+          </div>
+          <div class="moment-card">
+            <div class="tag">Daily Care</div>
+            <h3>The five minutes that are yours</h3>
+            <p>
+              A rich, everyday cream for postpartum recovery and daily
+              maintenance — gentle enough for sensitive, healing skin.
+            </p>
+            <div class="product">→ Magnesium Cream</div>
+          </div>-->
+        </div>
+      </div>
+    </section>
+
+    <section class="practitioners" id="practitioners">
+      <div class="wrap">
+        <div>
+          <div class="eyebrow">For Practitioners</div>
+          <h2>A product you can put your name behind.</h2>
+          <p>
+            We work directly with chiropractors, massage therapists, and doulas
+            who want a magnesium option they trust enough to recommend by name —
+            small-batch, transparent about ingredients, and easy to keep in
+            stock.
+          </p>
+          <!-- For this link, I would need to use Sendfox, Google Form, Form Robin, or create a custom form -->
+          <a class="btn-primary" href="#" data-wholesale-link
+            >Request Wholesale Info</a
+          >
+        </div>
+        <ul class="prac-list">
+          <li>Sample kits available for your practice</li>
+          <li>Simple, low-minimum wholesale pricing</li>
+          <li>Ingredient transparency, no proprietary blends</li>
+          <li>Direct line to the founders — not a call center</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="wrap">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <h3>Small-Batch</h3>
+            <p>Made and packed by hand in Rowlett, TX</p>
+          </div>
+          <div class="trust-item">
+            <h3>Ingredient-Transparent</h3>
+            <p>Every ingredient listed, nothing hidden behind "fragrance"</p>
+          </div>
+          <div class="trust-item">
+            <h3>Founder-Tested</h3>
+            <p>Tried at home first, before it reaches a customer</p>
+          </div>
+          <div class="trust-item">
+            <h3>DFW Rooted</h3>
+            <p>Built alongside the local community that shaped it</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="foot-top">
+          <div>
+            <h2>Ready to feel the difference?</h2>
+            <p>
+              The full collection, subscriptions, and bundles live on our store
+              — this page is just the front door.
+            </p>
+            <a
+              class="btn-primary"
+              href="https://www.thesolsalt.com/discount/WELCOME10?utm_source=github&utm_medium=social&utm_campaign=brand_awareness&utm_content=homepage_footer_link"
+              data-shopify-link
+              >Visit the Shopify Store →</a
+            >
+          </div>
+          <div class="foot-col">
+            <h4>Explore</h4>
+            <a href="#belief">Why Transdermal</a>
+            <a href="#origin">Our Story</a>
+            <a href="#moments">Collection</a>
+            <a href="#practitioners">For Practitioners</a>
+          </div>
+          <div class="foot-col">
+            <h4>Stay Close</h4>
+            <p style="margin-bottom: 10px">
+              Magnesium tips, restocks, and the occasional local event.
+            </p>
+            <div class="newsletter">
+              <input type="email" placeholder="you@email.com" />
+              <button type="button">Join</button>
+            </div>
+          </div>
+        </div>
+        <div class="foot-bottom">
+          <span>© 2026 SOL SALT · Rowlett, TX</span>
+          <span>Instagram · Contact</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
